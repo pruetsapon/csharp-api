@@ -3,11 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Webapi.DB.Model;
+using Microsoft.AspNetCore.Authorization;
+using Webapi.Models.DB;
 
 namespace Webapi.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class CustomerController : Controller
     {
         private readonly SystemDbContext _context;

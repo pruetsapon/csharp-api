@@ -1,7 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace Webapi.DB.Model
+namespace Webapi.Models.DB
 {
     public class SystemDbContext : DbContext
     {
@@ -11,5 +11,6 @@ namespace Webapi.DB.Model
         }
 
         public DbSet<Customer> Customer { get; set; }
+        public DbSet<Site> Site {get;set;}
     }
 }

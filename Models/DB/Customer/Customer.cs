@@ -1,6 +1,6 @@
 using System;
 
-namespace Webapi.DB.Model
+namespace Webapi.Models.DB
 {
     public class Customer
     {
