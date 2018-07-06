@@ -1,4 +1,4 @@
-# Web Api Example
+# Web Api
 
 ## Installation
     - install asp.net core  https://www.microsoft.com/net/download/core
