@@ -4,4 +4,6 @@ accounting/Migrations/
 
 accounting.tests/bin/
 accounting.tests/obj/
+
 coverage.json
+coverage-hits.txt
