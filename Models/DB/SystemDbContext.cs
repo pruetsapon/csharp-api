@@ -1,7 +1,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace Webapi.Models.DB
+namespace Accounting.WS.Models.DB
 {
     public class SystemDbContext : DbContext
     {
@@ -10,7 +10,13 @@ namespace Webapi.Models.DB
         {
         }
 
-        public DbSet<Customer> Customer { get; set; }
-        public DbSet<Site> Site {get;set;}
+        // site stuff
+        public DbSet<Site> Site { get; set; }
+
+        // expenditure stuff
+        public DbSet<Expenditure> Expenditure { get; set; }
+
+        // income stuff
+        public DbSet<Income> Income { get; set; }
     }
 }

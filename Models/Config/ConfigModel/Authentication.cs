@@ -1,6 +1,6 @@
 using System;
 
-namespace Webapi.Models.ConfigModel
+namespace Accounting.WS.Models.ConfigModel
 {
     public class Authentication
     {

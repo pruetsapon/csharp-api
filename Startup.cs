@@ -8,15 +8,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Webapi.Models.DB;
-using Webapi.Models.ConfigModel;
-using Webapi.Models.Config;
+using Accounting.WS.Models.DB;
+using Accounting.WS.Models.ConfigModel;
+using Accounting.WS.Models.Config;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 
-namespace Webapi
+namespace Accounting.WS
 {
     public class Startup
     {

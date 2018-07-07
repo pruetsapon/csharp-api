@@ -1,6 +1,6 @@
 Challenge Statement
 
-web-api-example is a api example. Use to create / read / update / delete their api.
+accounting is a api example. Use to create / read / update / delete their api.
 
 Prerequisites:
 - Any IDE
@@ -12,9 +12,9 @@ Development Environment
 =====================================
 
 MSSQL:
-- web-api-example application require a MSSQL database to store it's data. Make sure to update the file "appsettings.json" file.
+- accounting application require a MSSQL database to store it's data. Make sure to update the file "appsettings.json" file.
 
-web-api-example application:
+accounting application:
 - execute these commands.
 
 dotnet restore
@@ -30,5 +30,5 @@ dotnet run
 Some Curl command examples
 =====================================
 
-curl -i -H "Content-Type: application/json" -H "Authorization: Bearer your_token" -X POST -d "{'Name':'Docker', 'Lastname':'xyz'}" http://localhost:3001/api/customer
-curl -i -H "Content-Type: application/json" -H "Authorization: Bearer your_token" http://localhost:3001/api/customer
+curl -i -H "Content-Type: application/json" -X POST -d "{'Remark':'expenditure', 'Amount':'50'}" http://localhost:3001/api/expenditure
+curl -i -H "Content-Type: application/json" http://localhost:3001/api/expenditure

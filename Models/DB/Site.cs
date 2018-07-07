@@ -1,6 +1,6 @@
 using System;
 
-namespace Webapi.Models.DB
+namespace Accounting.WS.Models.DB
 {
     public class Site
     {

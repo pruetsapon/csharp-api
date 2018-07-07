@@ -1,7 +1,7 @@
 using System;
-using Webapi.Models.ConfigModel;
+using Accounting.WS.Models.ConfigModel;
  
-namespace Webapi.Models.Config
+namespace Accounting.WS.Models.Config
 {
     public class WebConfig
     {

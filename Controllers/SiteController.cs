@@ -4,15 +4,15 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc;
-using Webapi.Models.Config;
-using Webapi.Models.DB;
+using Accounting.WS.Models.Config;
+using Accounting.WS.Models.DB;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authorization;
 
-namespace Goohew.WS.Controllers
+namespace Accounting.WS.Controllers
 {
     [Route("api/[controller]")]
     [Authorize]
