@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -20,5 +21,15 @@ namespace Accounting.WS.Models.DB
         [Column(TypeName="Timestamp")]
         public Nullable<DateTime> Updated { get; set; }
         public List<ExpenditureReFund> ReFunds { get; set; }
+
+        public decimal GetTotal()
+        {
+            var total = this.Amount;
+            if(this.ReFunds.Count > 0)
+            {
+                total -= this.ReFunds.Sum(r => r.Amount);
+            }
+            return total;
+        }
     }
 }
