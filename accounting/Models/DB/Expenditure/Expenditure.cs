@@ -25,7 +25,7 @@ namespace Accounting.WS.Models.DB
         public decimal GetTotal()
         {
             var total = this.Amount;
-            if(this.ReFunds.Count > 0)
+            if(this.ReFunds != null && this.ReFunds.Count > 0)
             {
                 total -= this.ReFunds.Sum(r => r.Amount);
             }
