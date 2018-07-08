@@ -14,9 +14,7 @@ namespace Accounting.WS.Models.DB
         public decimal Amount { get; set; }
         [ForeignKey("ExpenditureId")]
         public int ExpenditureId { get; set; }
-        [Column(TypeName="Timestamp")]
         public Nullable<DateTime> Created { get; set; }
-        [Column(TypeName="Timestamp")]
         public Nullable<DateTime> Updated { get; set; }
     }
 }
