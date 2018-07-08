@@ -40,18 +40,18 @@ namespace Accounting.WS.Controllers
             IQueryable<Expenditure> expenditures = _context.Expenditure;
             if(period == DAILY_PERIOD)
             {
-                incomes = incomes.Where(s => s.Created.Value.Date == qryDate.Date);
-                expenditures = expenditures.Where(s => s.Created.Value.Date == qryDate.Date);
+                incomes = incomes.Where(s => s.FundedTime.Date == qryDate.Date);
+                expenditures = expenditures.Where(s => s.FundedTime.Date == qryDate.Date);
             }
             else if(period == MONTHLY_PERIOD)
             {
-                incomes = incomes.Where(s => s.Created.Value.Month == qryDate.Month && s.Created.Value.Year == qryDate.Year);
-                expenditures = expenditures.Where(s => s.Created.Value.Month == qryDate.Month && s.Created.Value.Year == qryDate.Year);
+                incomes = incomes.Where(s => s.FundedTime.Month == qryDate.Month && s.FundedTime.Year == qryDate.Year);
+                expenditures = expenditures.Where(s => s.FundedTime.Month == qryDate.Month && s.FundedTime.Year == qryDate.Year);
             }
             else if(period == YEARLY_PERIOD)
             {
-                incomes = incomes.Where(s => s.Created.Value.Year == qryDate.Year);
-                expenditures = expenditures.Where(s => s.Created.Value.Year == qryDate.Year);
+                incomes = incomes.Where(s => s.FundedTime.Year == qryDate.Year);
+                expenditures = expenditures.Where(s => s.FundedTime.Year == qryDate.Year);
             }
             var report = new Report();
             report.QueryTime = qryDate;

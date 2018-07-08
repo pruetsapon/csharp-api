@@ -12,7 +12,6 @@ namespace Accounting.WS.Models.DB
         public string Remark { get; set; }
         [Required]
         public decimal Amount { get; set; }
-        [Column(TypeName="Timestamp")]
         public DateTime FundedTime { get; set; }
         public Nullable<DateTime> Created { get; set; }
         public Nullable<DateTime> Updated { get; set; }

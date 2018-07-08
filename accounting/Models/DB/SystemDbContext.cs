@@ -15,6 +15,7 @@ namespace Accounting.WS.Models.DB
 
         // expenditure stuff
         public DbSet<Expenditure> Expenditure { get; set; }
+        public DbSet<ExpenditureReFund> ExpenditureReFund { get; set; }
 
         // income stuff
         public DbSet<Income> Income { get; set; }

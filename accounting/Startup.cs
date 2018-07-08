@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Accounting.WS.Models.DB;
 using Accounting.WS.Models.ConfigModel;
 using Accounting.WS.Models.Config;
+using Accounting.WS.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -60,6 +61,8 @@ namespace Accounting.WS
                     ClockSkew = TimeSpan.Zero // remove delay of token when expire
                 };
             });
+            services.AddSingleton<IExpenditureRepository, ExpenditureRepository>();
+            services.AddSingleton<IReFundRepository, ReFundRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

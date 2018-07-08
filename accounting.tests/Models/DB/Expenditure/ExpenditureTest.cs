@@ -11,6 +11,7 @@ namespace Accounting.WS.Test.Models.DB
         public void ExpenditureAllTest()
         {
             var expenditure = new Expenditure();
+            expenditure.Remark = "Expenditure1";
             expenditure.Amount = 500;
             Assert.Equal(500, expenditure.GetTotal());
             //add refund
@@ -30,6 +31,7 @@ namespace Accounting.WS.Test.Models.DB
         private ExpenditureReFund GetExpenditureReFund1()
         {
             return  new ExpenditureReFund(){
+                        Remark = "ReFund1",
                         Amount = 100
                     };
         }
@@ -37,6 +39,7 @@ namespace Accounting.WS.Test.Models.DB
         private ExpenditureReFund GetExpenditureReFund2()
         {
             return  new ExpenditureReFund(){
+                        Remark = "ReFund2",
                         Amount = 50
                     };
         }
