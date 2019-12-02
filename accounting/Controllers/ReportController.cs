@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Accounting.WS.Controllers
 {
     [Route("api/[controller]")]
+    // [Authorize]
     public class ReportController : Controller
     {
         private readonly SystemDbContext _context;

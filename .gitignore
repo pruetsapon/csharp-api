@@ -7,3 +7,5 @@ accounting.tests/obj/
 
 coverage.json
 coverage-hits.txt
+
+.vs
