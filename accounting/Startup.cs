@@ -17,6 +17,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.OpenApi.Models;
 
 namespace Accounting.WS
 {
@@ -39,6 +40,11 @@ namespace Accounting.WS
                 opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.Configure<WebConfig>(Configuration.GetSection("WebConfig"));
             services.AddMvc();
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "API Docs", Version = "v1" });
+            });
             var webConfig = new WebConfig();
             Configuration.GetSection("WebConfig").Bind(webConfig);
             var authenticationConfig = webConfig.Authentication;
@@ -73,6 +79,14 @@ namespace Accounting.WS
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Docs");
+            });
 
             // app.UseMvc();
             app.UseHttpsRedirection();
