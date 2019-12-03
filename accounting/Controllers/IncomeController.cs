@@ -10,7 +10,7 @@ using System.Globalization;
 namespace Accounting.WS.Controllers
 {
     [Route("api/[controller]")]
-    // [Authorize]
+    [Authorize]
     public class IncomeController : Controller
     {
         private readonly SystemDbContext _context;
