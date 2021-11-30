@@ -4,7 +4,7 @@ accounting is a api example. Use to create / read / update / delete their api.
 
 Prerequisites:
 - Any IDE
-- .NET Core SDK 2.1.4
+- .NET SDK 5.0
 - MSSQL
 
 =====================================
